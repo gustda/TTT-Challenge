@@ -1,0 +1,105 @@
+Req 1: Projektstruktur aufsetzten
+Status: Neu
+Aufwand: Medium
+Beschreibung:
+Für die Implementierung des ersten Releases ist eine Projektstruktur auf zu setzten, 
+die es ermöglicht, die in diesem Schritt geplanten Anforderungen um zu setzten.
+
+Abnahmekriterien:
+- Es ist eine Struktur skiziert, die es ermöglicht die geplanten Anforderungen 
+  umzusetzten
+- Die Struktur ist Objektorientiert aufgebaut
+- Die Struktur so Dokumenttiert, dass eine klare zuordnung der Zuständigkeiten 
+  der einzelnen Komponenten erkennbar ist.
+
+-----------------------------------------------------------------------------------
+
+Req. 2: Spiel Starten
+Status: Neu
+Aufwand: Large
+Beschreibung:
+Spieler möchten ein neues Spiel starten, in dem er die Anwendung startet.
+
+Abnahmekriterien:
+- Das Programm lässt sich Starten und es beginnt ein neues Spiel
+
+------------------------------------------------------------------------------------
+
+Req. 2.1: Spielfeld anzeigen
+Status: Neu
+Aufwand: Medium
+Beschreibung:
+TicTacToe wird auf einem Spielfeld gespielt dieses soll den Spielern angezeigt werden.
+
+Abnahmekriterien:
+- Es wird ein Spielfeld mit dem folgenden Aussehen dargestellt
+
+ | |
+-+-+-
+ | |
+-+-+-
+ | |
+
+ ------------------------------------------------------------------------------------
+
+Req. 2.2: Kommandos eingeben
+Status: Neu
+Aufwand: smal
+Beschreibung:
+Um das Spiel zu steuern müssen die Spieler Kommandos eingeben können. Zur Eingabe 
+sollten einfache Kommandos verwendet werden
+
+Abnahmekriterien:
+- Der Spieler kann Kommandos eingeben, welche von dem Speil ausgewertet werden
+
+ ------------------------------------------------------------------------------------
+
+Req. 2.3: Meldungen an den Spieler ausgeben
+Status: Neu
+Aufwand: smal
+Beschreibung:
+Um die Spieler informieren zu können, soll das Spiel Mitteilungen an den Spieler geben 
+können diese Mitteilungen sollten für den Spieler gut erkennbar und klar als 
+Mitteilungen erkannt werden.
+
+Abnahmekriterien:
+- Das Spiel kann dem Spieler Mitteilungen machen, z.B. welcher Spieler am Zug ist.
+
+-------------------------------------------------------------------------------------
+
+Req. 3: Spielstein setzten
+Status: Neu
+Aufwand: Large
+Beschreibung:
+Um das Spiel spielen zu können, müssen die Spieler Spielsteine setzten können.
+
+Abnahmekriterien:
+- Ein Spieler kann das setzten eines Steins durch ein Kommando starten
+- Der Stein wird auf das gewünschte Spielfeld getsetzt
+- Spielfelder werden nciht mehrfach belegt
+- Es erfolgt eine Auswertung, ob das Spiel beendet worden ist
+- Es erfolgen ausgaben an den Spieler
+
+-------------------------------------------------------------------------------------
+
+Req. 4: Spiel neustarten
+Status: Neu
+Aufwand: smal
+Beschreibung:
+Das Spiel soll vom Spieler aus dem Programm heraus durch ein Kommando neugestartet 
+werden können.
+
+Abnahmekriterien:
+- Durch ein Kommando "neu" startet ein neues Spiel das alte spiel geht dabei verloren.
+
+-------------------------------------------------------------------------------------
+
+Req. 5: Spiel beenden
+Status: Neu
+Aufwand: smal
+Beschreibung:
+Das Spiel soll vom Spieler aus dem Programm heraus durch ein Kommando beendet werden 
+können.
+
+Abnahmekriterien:
+- Das Spiel kann durch ein Kommando "ende" beendet werden.

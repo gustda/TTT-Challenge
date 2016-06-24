@@ -15,7 +15,7 @@ Abnahmekriterien:
 -----------------------------------------------------------------------------------
 
 Req. 2: Spiel Starten
-Status: Neu
+Status: erledigt
 Aufwand: Large
 Beschreibung:
 Spieler möchten ein neues Spiel starten, in dem er die Anwendung startet.

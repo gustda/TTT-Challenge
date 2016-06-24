@@ -11,7 +11,7 @@ namespace TTT_Challenge.Graphics
     {
         public static void PrintGamePlayOutput(Game actGame)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("New Game started");
         }
     }
 }

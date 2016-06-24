@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TTT_Challenge.Controller;
 
 namespace TTT_Challenge
 {
@@ -10,6 +11,8 @@ namespace TTT_Challenge
     {
         static void Main(string[] args)
         {
+            var controller = new GameController();
+            controller.Run();
         }
     }
 }

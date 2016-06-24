@@ -11,7 +11,11 @@ namespace TTT_Challenge.Graphics
     {
         public static void PrintGamePlayOutput(Game actGame)
         {
+            // Print Gameboard
+            Gameboard.PrintGameBoard(actGame);
+
             Console.WriteLine("New Game started");
+            
         }
     }
 }

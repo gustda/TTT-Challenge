@@ -11,7 +11,14 @@ namespace TTT_Challenge.Graphics
     {
         public static void PrintGameBoard(Game actGame)
         {
-            throw new NotImplementedException();
+            // first we start with a print of a gameboard without 
+            // handling any gamestones
+            Console.WriteLine(" A B C");
+            Console.WriteLine("0 | | ");
+            Console.WriteLine(" -+-+-");
+            Console.WriteLine("1 | | ");
+            Console.WriteLine(" -+-+-");
+            Console.WriteLine("2 | | ");
         }
     }
 }

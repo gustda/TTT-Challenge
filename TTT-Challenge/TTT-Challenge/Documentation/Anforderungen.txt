@@ -26,7 +26,7 @@ Abnahmekriterien:
 ------------------------------------------------------------------------------------
 
 Req. 2.1: Spielfeld anzeigen
-Status: Neu
+Status: erldigt
 Aufwand: Medium
 Beschreibung:
 TicTacToe wird auf einem Spielfeld gespielt dieses soll den Spielern angezeigt werden.

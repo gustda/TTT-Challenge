@@ -34,11 +34,12 @@ TicTacToe wird auf einem Spielfeld gespielt dieses soll den Spielern angezeigt w
 Abnahmekriterien:
 - Es wird ein Spielfeld mit dem folgenden Aussehen dargestellt
 
- | |
--+-+-
- | |
--+-+-
- | |
+ A B C
+0 | |
+ -+-+-
+1 | |
+ -+-+-
+2 | |
 
  ------------------------------------------------------------------------------------
 

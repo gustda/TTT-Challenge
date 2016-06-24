@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\GameController.cs" />
+    <Compile Include="Model\Game.cs" />
+    <Compile Include="Model\GameResult.cs" />
+    <Compile Include="Model\GameStoneState.cs" />
+    <Compile Include="Graphics\ConsoleOutputController.cs" />
+    <Compile Include="Graphics\Gameboard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documentation\Anforderungen.txt" />
+    <Content Include="Documentation\Design.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

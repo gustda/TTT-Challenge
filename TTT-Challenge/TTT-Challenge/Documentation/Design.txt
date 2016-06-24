@@ -1,0 +1,38 @@
+Design Iteration 1:
+
+Als Designgrundlage wir eine Art Model-View-Controler Architektur verwendet. 
+Für die Problemstellung möglicherweise ein Wenig überdimensioniert, aber es 
+geht ja nicht darum schnell zu einer Lösung zu kommen, sondern etwas über 
+veränderte Anforderungen zu lernen, dafür ist, denke ich, dieser Ansatz 
+hilfreich, da ich dadurch vielleicht einfacher auf größere Problemstellungen 
+hochskalieren kann.
+
+Der Aufbau ist wie folgt:
+Model:
+ Die Klasse Game stellt eine Instanz eines Spiels dar. Diese ist nur solange
+ gültig, wie das Spiel dauert und in dem Fall, dass das Spiel neugestartet werden
+ soll, wird die Isntanz einfach ersetzt.
+
+ Hier liegen auch zwei Enums um verschiedene Status zu beschreiben. GameResult 
+ beschreibt den das aktuell vorliegende Ergebnis, GameStoneState representiert den
+ Wert eines Spielfeldes, also wessen stein darauf liegt, bzw. ob das Feld leer ist.
+
+View (Hier Graphics):
+ Die Klasse OutputController ist zuständig dafür, die Gesamte Consolen Ausgabe zu 
+ organisieren, d.h. sowohl die Ausgabe des Spielfeldes, als auch die Texte etc.
+ Die Klasse Gameboard wird nur zur Darstellung des Spielfeldes verwendet. Nicht das 
+ ich erwarte, diese Komponenete zeitnah zu ersetzten aber ein Ausgleidern scheint mir 
+ doch nciht ganz unsinnig, da die Aufgabe eher "grafischer Natur" ist, die des 
+ OutputControllers eher organisiatorisch.
+ Die beiden Klassen sind static umgesetzt, da hier reine Dienstleistung passiert. Es
+ werden keine Daten gespeichert o.ä. Ees macht keinen Sinn  zwei davon zu haben 
+ -> static
+
+Controller:
+ Die Klasse GameController kontrolliert das gesamte Spiel. Man könnte dieses Verhalten
+ auch in Programm.cs einbauen, dann fände ich es aber befremdlich dort weitere 
+ Funktionen neben der Main zu implementieren, deswegen darf auch die Hauptschleife dort 
+ untergebracht werden, programm.cs wird das Spiel nur noch starten, mehr wird dort
+ erstmal nicht passieren.
+ GameController ist auch für die Auswertung der Commands zuständig und für das triggern
+ der Ausgaben etc.

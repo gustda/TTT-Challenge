@@ -1,5 +1,5 @@
 Req 1: Projektstruktur aufsetzten
-Status: Neu
+Status: erledigt
 Aufwand: Medium
 Beschreibung:
 Für die Implementierung des ersten Releases ist eine Projektstruktur auf zu setzten, 
@@ -9,7 +9,7 @@ Abnahmekriterien:
 - Es ist eine Struktur skiziert, die es ermöglicht die geplanten Anforderungen 
   umzusetzten
 - Die Struktur ist Objektorientiert aufgebaut
-- Die Struktur so Dokumenttiert, dass eine klare zuordnung der Zuständigkeiten 
+- Die Struktur so Dokumenttiert, dass eine klare Zuordnung der Zuständigkeiten 
   der einzelnen Komponenten erkennbar ist.
 
 -----------------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 Req 1: Projektstruktur aufsetzten
-Status: erledigt
+Status: erledigt (Iteration 1)
 Aufwand: Medium
 Beschreibung:
 Für die Implementierung des ersten Releases ist eine Projektstruktur auf zu setzten, 
@@ -15,7 +15,7 @@ Abnahmekriterien:
 -----------------------------------------------------------------------------------
 
 Req. 2: Spiel Starten
-Status: erledigt
+Status: erledigt (Iteration 1)
 Aufwand: Large
 Beschreibung:
 Spieler möchten ein neues Spiel starten, in dem er die Anwendung startet.
@@ -26,7 +26,7 @@ Abnahmekriterien:
 ------------------------------------------------------------------------------------
 
 Req. 2.1: Spielfeld anzeigen
-Status: erldigt
+Status: erldigt (Iteration 1)
 Aufwand: Medium
 Beschreibung:
 TicTacToe wird auf einem Spielfeld gespielt dieses soll den Spielern angezeigt werden.
@@ -51,11 +51,11 @@ Um das Spiel zu steuern müssen die Spieler Kommandos eingeben können. Zur Eingab
 sollten einfache Kommandos verwendet werden
 
 Abnahmekriterien:
-- Der Spieler kann Kommandos eingeben, welche von dem Speil ausgewertet werden
+- Der Spieler kann Kommandos eingeben, welche von dem Spiel ausgewertet werden
 
  ------------------------------------------------------------------------------------
 
-Req. 2.3: Meldungen an den Spieler ausgeben
+Req. 2.3: Meldungen an den Spieler ausgeben (Allgemein)
 Status: Neu
 Aufwand: smal
 Beschreibung:
@@ -65,6 +65,9 @@ Mitteilungen erkannt werden.
 
 Abnahmekriterien:
 - Das Spiel kann dem Spieler Mitteilungen machen, z.B. welcher Spieler am Zug ist.
+- Es wird immer die aktuellste Mitteilung angezeigt, d.h. eine Mitteilung, die einen
+  Handlungsheinweis gibt, was nun zu tun ist, bzw. über das Ergebnis informiert.
+  (Neu in Iteration 2)
 
 -------------------------------------------------------------------------------------
 
@@ -77,9 +80,59 @@ Um das Spiel spielen zu können, müssen die Spieler Spielsteine setzten können.
 Abnahmekriterien:
 - Ein Spieler kann das setzten eines Steins durch ein Kommando starten
 - Der Stein wird auf das gewünschte Spielfeld getsetzt
-- Spielfelder werden nciht mehrfach belegt
+- Spielfelder werden nicht mehrfach belegt
 - Es erfolgt eine Auswertung, ob das Spiel beendet worden ist
 - Es erfolgen ausgaben an den Spieler
+
+-------------------------------------------------------------------------------------
+
+Req. 3.1: Spielfeld mit Spielsteinen zeichnen
+Status: Neu
+Aufwand: medium
+Beschreibung:
+Spielsteine, die gesetzt wurden, sollen dem Spieler angezeigt werden, dies soll auf 
+dem Spielfeld passieren.
+
+Abnahmekriterien:
+- Spieler 1 erhält das Zeichen 'X', Spieler 2 das Zeichen 'O' diese stellen die
+  Spielteine der Spieler dar.
+- Nach jedem Spielzug soll das Spielfeld neu gezeichnet werden
+- Das Spielfeld steht immer an der selben Stelle des Fensters angezeigt werden.
+
+-------------------------------------------------------------------------------------
+
+Req. 3.2: Kommando Spielstein setzten interpretieren
+Status: Neu
+Aufwand: medium
+Beschreibung:
+Die Spieler sollen über die Eingabe eines kurzen Befehls einen Spielstein an eine 
+der neun möglichen Positionen setzten können.
+
+Abnahmekriterien:
+- Die Eingabe erfolgt nach dem muster SpalteZeile also z.B. "A0"
+- Eingaben werden unabhängig von Groß- und Kleinschreibung durchgeführt
+- Bei der Eingabe wird geprüft ob das Feld schon belegt ist, in diesem Fall kann der
+  Spieler eine weitere Eingabe machen
+- Es sind Unittests implementiert, die die folgenden Testfälle abdecken
+  - Eingabe ungültig
+  - Spielstein setzten auf freies Feld
+  - Spielstein setzten auf belegtes Feld
+
+-------------------------------------------------------------------------------------
+
+Req. 3.3: Meldungen zur Bedienung ausgeben
+Status: Neu
+Aufwand: smal
+Beschreibung:
+Die Spieler sollen Informiert werden, was als nächstes zu tun ist. Dazu sind die 
+folgenden Ausgaben umzusetzten.
+- Spieler X: Spielstein setzten
+- Spieler X: Eingabe ungültig, erneut Spielstein setzten
+- Spieler X: Feld bereits belegt, erneut Spielstein setzten
+- Spielende alle Felder belegt
+
+Abnahmekriterien:
+- Die Ausgaben werden an den Spielern angezeigt
 
 -------------------------------------------------------------------------------------
 

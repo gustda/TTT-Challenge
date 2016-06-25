@@ -44,7 +44,7 @@ Abnahmekriterien:
  ------------------------------------------------------------------------------------
 
 Req. 2.2: Kommandos eingeben
-Status: Neu
+Status: erledigt (Iteration 2)
 Aufwand: smal
 Beschreibung:
 Um das Spiel zu steuern müssen die Spieler Kommandos eingeben können. Zur Eingabe 

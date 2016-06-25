@@ -22,21 +22,34 @@ namespace TTT_Challenge.Controller
         }
 
         private string NextCommand = "";
+        private CommandState LastCommandState = CommandState.UnknownCommand;
 
         public void Run()
         {
             // we have to start a new Game
             StartGame();
+            do
+            {
+                // we have to do some Output
+                ConsoleOutputController.PrintGamePlayOutput(actGame);
 
-            // we have to do some Output
-            ConsoleOutputController.PrintGamePlayOutput(actGame);
+                // print command to inform the player, what is to do next
+                ConsoleOutputController.PrintCommand(NextCommand);
 
-            // print command to inform the player, what is to do next
-            ConsoleOutputController.PrintCommand(NextCommand);
+                // Wait for user interaction
+                var userInput = Console.ReadLine();
+                // process user input
+                LastCommandState = CheckAndProcessCommand(userInput);
+            } while (true);
+        }
 
-            // Wait for user interaction
-            Console.ReadLine();
-            return;
+        private CommandState CheckAndProcessCommand(string command)
+        {
+            switch (command)
+            {
+                default:
+                    return CommandState.UnknownCommand;
+            }
         }
     }
 }

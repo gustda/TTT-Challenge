@@ -20,4 +20,9 @@ namespace TTT_Challenge
         PlayerOne,
         PlayerTwo,
     }            
+
+    public enum CommandState
+    {
+        UnknownCommand,
+    }
 }

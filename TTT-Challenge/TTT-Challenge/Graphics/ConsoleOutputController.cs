@@ -26,6 +26,7 @@ namespace TTT_Challenge.Graphics
             {
                 // print default text if no command is set.
                 Console.WriteLine("Hier könnte ein Commando stehen.");
+                Console.Write("Kommando: ");
             }
         }
     }

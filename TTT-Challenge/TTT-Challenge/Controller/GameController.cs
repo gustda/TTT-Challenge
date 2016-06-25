@@ -54,31 +54,10 @@ namespace TTT_Challenge.Controller
             command=command.ToLower();
             if (ActGame.Result == GameResult.Open)
             {
-                // process stone input
+                // process stone input, only stone commands have a length of two chars
                 if (command.Length == 2)
                 {
-                    char column = command[0];
-                    int row;
-                    try
-                    {
-                        row = Convert.ToInt16(command.Substring(1));
-                    }
-                    catch
-                    {
-                        return CommandState.UnknownCommand;
-                    }
-                    if (ActGame.CheckValidCoordinate(column, row))
-                    {
-                        if (ActGame.SetStone(ActPlayer, command[0], row))
-                        {
-                            NextPlayer();
-                            return CommandState.GetStone;
-                        }
-                        else
-                        {
-                            return CommandState.GetStoneOnceAgainOccupiedField;
-                        }
-                    }
+                   return ProcessStoneCommand(command);
                 }
             }
 
@@ -91,6 +70,32 @@ namespace TTT_Challenge.Controller
             }
         }
 
+        private CommandState ProcessStoneCommand(string command)
+        {
+            char column = command[0];
+            int row;
+            try
+            {
+                row = Convert.ToInt16(command.Substring(1));
+            }
+            catch
+            {
+                return CommandState.UnknownCommand;
+            }
+            if (ActGame.CheckValidCoordinate(column, row))
+            {
+                if (ActGame.SetStone(ActPlayer, command[0], row))
+                {
+                    NextPlayer();
+                    return CommandState.GetStone;
+                }
+                else
+                {
+                    return CommandState.GetStoneOnceAgainOccupiedField;
+                }
+            }
+            return CommandState.UnknownCommand;
+        }
 
         private void NextPlayer()
         {

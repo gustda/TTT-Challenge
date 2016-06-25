@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TTT_Challenge.Model
 {
-    class Game
+    public class Game
     {
         public GameResult Result { get; set; }
         public int MovesPlayerOne { get; set; }

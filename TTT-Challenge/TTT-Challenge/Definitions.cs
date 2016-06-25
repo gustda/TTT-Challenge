@@ -19,10 +19,20 @@ namespace TTT_Challenge
         Free,
         PlayerOne,
         PlayerTwo,
-    }            
+    }           
+ 
+    public enum Player
+    {
+        None,
+        PlayerOne,
+        PlayerTwo,
+    }
 
     public enum CommandState
     {
         UnknownCommand,
+        GetStone,
+        GetStoneOnceAgainUnknownCommand,
+        GetStoneOnceAgainOccupiedField,
     }
 }

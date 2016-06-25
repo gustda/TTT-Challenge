@@ -21,12 +21,12 @@ namespace TTT_Challenge.Graphics
             if (command != "")
             {
                 Console.WriteLine(command);
+                Console.Write("Kommando: ");
             }
             else
             {
                 // print default text if no command is set.
-                Console.WriteLine("Hier könnte ein Commando stehen.");
-                Console.Write("Kommando: ");
+                Console.WriteLine("Fehler: Hier sollte ein Kommando stehen.");                
             }
         }
     }

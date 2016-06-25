@@ -61,6 +61,7 @@ namespace TTT_Challenge.Model
                     break;
             }
             Moves++;
+            // we have added a stone, so check if the game is over
             CheckGameResult();
             return true;
         }

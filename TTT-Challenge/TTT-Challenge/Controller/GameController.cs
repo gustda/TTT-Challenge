@@ -34,6 +34,7 @@ namespace TTT_Challenge.Controller
             StartGame();
             do
             {
+                Console.Clear();
                 // we have to do some Output
                 ConsoleOutputController.PrintGamePlayOutput(ActGame);
 
@@ -81,6 +82,7 @@ namespace TTT_Challenge.Controller
                 }
             }
 
+            // process non gameplay commands
             switch (command)
             {
 

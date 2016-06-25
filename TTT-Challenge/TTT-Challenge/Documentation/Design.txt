@@ -1,11 +1,9 @@
 Design Iteration 1:
 
-Als Designgrundlage wir eine Art Model-View-Controler Architektur verwendet. 
-Für die Problemstellung möglicherweise ein Wenig überdimensioniert, aber es 
-geht ja nicht darum schnell zu einer Lösung zu kommen, sondern etwas über 
-veränderte Anforderungen zu lernen, dafür ist, denke ich, dieser Ansatz 
-hilfreich, da ich dadurch vielleicht einfacher auf größere Problemstellungen 
-hochskalieren kann.
+Als Designgrundlage wird eine Art Model-View-Controler Architektur verwendet. 
+Für die Problemstellung möglicherweise ein wenig überdimensioniert, jedoch gehe 
+ich davon aus, dass ich mindestens das Model, evtl. auch Teile oder gar den 
+ganzen Controller nach der Umstellung auf eine GUI Version weiter verwenden kann.
 
 Der Aufbau ist wie folgt:
 Model:
@@ -18,7 +16,7 @@ Model:
  Wert eines Spielfeldes, also wessen stein darauf liegt, bzw. ob das Feld leer ist.
 
 View (Hier Graphics):
- Die Klasse OutputController ist zuständig dafür, die Gesamte Consolen Ausgabe zu 
+ Die Klasse OutputController ist zuständig dafür, die gesamte Consolen Ausgabe zu 
  organisieren, d.h. sowohl die Ausgabe des Spielfeldes, als auch die Texte etc.
  Die Klasse Gameboard wird nur zur Darstellung des Spielfeldes verwendet. Nicht das 
  ich erwarte, diese Komponenete zeitnah zu ersetzten aber ein Ausgleidern scheint mir 

@@ -72,7 +72,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 3: Spielstein setzten
-Status: Neu
+Status: erledigt (Iteration2)
 Aufwand: Large
 Beschreibung:
 Um das Spiel spielen zu können, müssen die Spieler Spielsteine setzten können.
@@ -87,7 +87,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 3.1: Spielfeld mit Spielsteinen zeichnen
-Status: Neu
+Status: erledigt (Iteration 2)
 Aufwand: medium
 Beschreibung:
 Spielsteine, die gesetzt wurden, sollen dem Spieler angezeigt werden, dies soll auf 

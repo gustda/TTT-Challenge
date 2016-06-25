@@ -21,6 +21,8 @@ namespace TTT_Challenge.Controller
             actGame = new Game();
         }
 
+        private string NextCommand = "";
+
         public void Run()
         {
             // we have to start a new Game
@@ -28,6 +30,9 @@ namespace TTT_Challenge.Controller
 
             // we have to do some Output
             ConsoleOutputController.PrintGamePlayOutput(actGame);
+
+            // print command to inform the player, what is to do next
+            ConsoleOutputController.PrintCommand(NextCommand);
 
             // Wait for user interaction
             Console.ReadLine();

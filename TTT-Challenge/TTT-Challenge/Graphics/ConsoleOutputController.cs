@@ -12,10 +12,21 @@ namespace TTT_Challenge.Graphics
         public static void PrintGamePlayOutput(Game actGame)
         {
             // Print Gameboard
-            Gameboard.PrintGameBoard(actGame);
+            Gameboard.PrintGameBoard(actGame);                       
+        }
 
-            Console.WriteLine("New Game started");
-            
+        public static void PrintCommand(string command)
+        {
+            // check the command
+            if (command != "")
+            {
+                Console.WriteLine(command);
+            }
+            else
+            {
+                // print default text if no command is set.
+                Console.WriteLine("Hier könnte ein Commando stehen.");
+            }
         }
     }
 }

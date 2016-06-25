@@ -56,7 +56,7 @@ Abnahmekriterien:
  ------------------------------------------------------------------------------------
 
 Req. 2.3: Meldungen an den Spieler ausgeben (Allgemein)
-Status: Neu
+Status: erledigt (Iteration 2)
 Aufwand: smal
 Beschreibung:
 Um die Spieler informieren zu können, soll das Spiel Mitteilungen an den Spieler geben 
@@ -66,7 +66,7 @@ Mitteilungen erkannt werden.
 Abnahmekriterien:
 - Das Spiel kann dem Spieler Mitteilungen machen, z.B. welcher Spieler am Zug ist.
 - Es wird immer die aktuellste Mitteilung angezeigt, d.h. eine Mitteilung, die einen
-  Handlungsheinweis gibt, was nun zu tun ist, bzw. über das Ergebnis informiert.
+  Handlungshinweis gibt, was nun zu tun ist, bzw. über das Ergebnis informiert.
   (Neu in Iteration 2)
 
 -------------------------------------------------------------------------------------

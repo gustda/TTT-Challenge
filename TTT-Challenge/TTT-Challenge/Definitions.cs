@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TTT_Challenge.Model
+namespace TTT_Challenge
 {
     public enum GameResult
     {
@@ -13,4 +13,11 @@ namespace TTT_Challenge.Model
         PalyerTwoWins,
         Remies,
     }
+
+    public enum GameStoneState
+    {
+        Free,
+        PlayerOne,
+        PlayerTwo,
+    }            
 }

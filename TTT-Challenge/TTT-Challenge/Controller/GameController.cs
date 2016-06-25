@@ -17,7 +17,7 @@ namespace TTT_Challenge.Controller
 
         }
 
-        private void StartGame()
+        public void StartGame()
         {
             // generate a new instance of game
             ActGame = new Game();
@@ -48,17 +48,78 @@ namespace TTT_Challenge.Controller
             } while (true);
         }
 
-        private CommandState CheckAndProcessCommand(string command)
+        public CommandState CheckAndProcessCommand(string command)
         {
+            command=command.ToLower();
+            if (ActGame.Result == GameResult.Open)
+            {
+                // process stone input
+                if (command.Length == 2)
+                {
+                    char column = command[0];
+                    int row;
+                    try
+                    {
+                        row = Convert.ToInt16(command.Substring(1));
+                    }
+                    catch
+                    {
+                        return CommandState.UnknownCommand;
+                    }
+                    if (ActGame.CheckValidCoordinate(column, row))
+                    {
+                        if (ActGame.SetStone(ActPlayer, command[0], row))
+                        {
+                            NextPlayer();
+                            return CommandState.GetStone;
+                        }
+                        else
+                        {
+                            return CommandState.GetStoneOnceAgainOccupiedField;
+                        }
+                    }
+                }
+            }
+
             switch (command)
             {
+
                 default:
                     return CommandState.UnknownCommand;
             }
         }
 
+
+        private void NextPlayer()
+        {
+            if (ActPlayer == Player.None)
+            {
+                ActPlayer = Player.PlayerOne;
+                return;
+            }
+            if (ActPlayer == Player.PlayerOne)
+            {
+                ActPlayer = Player.PlayerTwo;
+                return;
+            }
+            if (ActPlayer == Player.PlayerTwo)
+                ActPlayer = Player.PlayerOne;
+
+        }
+
         public string GetNextPlayersPrompt()
         {
+            if(ActGame.Result!= GameResult.Open)
+            {
+                switch(ActGame.Result)
+                {
+                    case GameResult.Remies:
+                        return "Game Over";
+                    default:
+                        return "Not yet implemented";
+                }
+            }
+
             string playerText = "";
             switch (ActPlayer)
             {

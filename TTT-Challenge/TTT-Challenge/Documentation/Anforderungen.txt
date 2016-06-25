@@ -102,8 +102,8 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 3.2: Kommando Spielstein setzten interpretieren
-Status: Neu
-Aufwand: medium
+Status: erledigt (Iteration 2)
+Aufwand: medium -> large
 Beschreibung:
 Die Spieler sollen über die Eingabe eines kurzen Befehls einen Spielstein an eine 
 der neun möglichen Positionen setzten können.
@@ -121,7 +121,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 3.3: Meldungen zur Bedienung ausgeben
-Status: Neu
+Status: erledigt (Iteration 2)
 Aufwand: smal
 Beschreibung:
 Die Spieler sollen Informiert werden, was als nächstes zu tun ist. Dazu sind die 

@@ -136,7 +136,15 @@ Abnahmekriterien:
 
 -------------------------------------------------------------------------------------
 
-Req. 4: Spiel neustarten
+Req. 4: Spielkommandos Auswerten
+Status: Neu
+Aufwand: medium
+Beschreibung:
+Das Spiel soll vom Spieler aus dem Programm heraus durch ein Kommando bedienen können.
+
+-------------------------------------------------------------------------------------
+
+Req. 4.1: Spiel neustarten
 Status: Neu
 Aufwand: smal
 Beschreibung:
@@ -148,7 +156,7 @@ Abnahmekriterien:
 
 -------------------------------------------------------------------------------------
 
-Req. 5: Spiel beenden
+Req. 4.2: Spiel beenden
 Status: Neu
 Aufwand: smal
 Beschreibung:
@@ -157,3 +165,59 @@ können.
 
 Abnahmekriterien:
 - Das Spiel kann durch ein Kommando "ende" beendet werden.
+
+-------------------------------------------------------------------------------------
+
+Req. 4.3: Hilfe Anzeigen
+Status: Neu
+Aufwand: smal
+Beschreibung:
+Das Spiel soll vom Spieler aus dem Programm heraus durch ein Kommando eine Hilfe 
+anzeigen, damit die Spieler wissen, welche Kommandos was bewirken.
+
+Abnahmekriterien:
+- Das Spiel kann durch ein Kommando "?" einen Hilfetext anzeigen
+
+-------------------------------------------------------------------------------------
+
+Req. 5: Spielauswertung
+Status: Neu
+Aufwand: Large
+Beschreibung:
+Das Spiel soll herausfinden, wie es ausgegangen ist. Dafür sind einige Regeln 
+einzuhalten. 
+
+Abnahmekriterien:
+- Das Spiel kann herausfinden, ob es beendet ist und welcher Spieler gewonnen hat
+
+-------------------------------------------------------------------------------------
+
+Req. 5.1: Einen Gewinner ermitteln
+Status: Neu
+Aufwand: medium
+Beschreibung:
+Es gibt verschiedene Möglichkeiten das Spiel zu gewinnen. Es müssen drei gleiche Steine 
+in einer Reihe, einer Spalte oder einer Diagonalen vorhanden sein, damit ein Spieler
+gewonnen hat.
+
+Abnahmekriterien:
+- Das Spiel erkennt, dass ein Spieler gewonnen hat, wenn drei gleiche Steine in einer 
+  Reihe liegen.
+- Das Spiel erkennt, dass ein Spieler gewonnen hat, wenn drei gleiche Steine in einer 
+  Spalte liegen.
+- Das Spiel erkennt, dass ein Spieler gewonnen hat, wenn drei gleiche Steine in einer
+  Diagonalen liegen.
+
+  -------------------------------------------------------------------------------------
+
+Req. 5.2: Ein Remies ermitteln
+Status: Neu
+Aufwand: medium
+Beschreibung:
+Das Spiel soll erkennen, dass das Spiel unentschieden ausgegangen ist.
+
+Abnahmekriterien:
+- Das Spiel erkennt, dass das Spiel unentschieden ist, wenn alle Felder belegt sind und 
+  und kein Spieler drei Steine in einer Reihe, einer Spalte oder einer Diagonalen besitzt
+- Das Spiel erkennt, dass das Spiel unentschieden endet, wenn es keinem Spieler mehr 
+  möglich ist, eine Reihe, eine Spalte oder eine Diagonale aufzufüllen.

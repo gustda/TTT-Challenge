@@ -16,9 +16,9 @@ namespace TTT_Challenge
 
     public enum GameStoneState
     {
-        Free,
-        PlayerOne,
-        PlayerTwo,
+        Free=0,
+        PlayerOne=1,
+        PlayerTwo=2,
     }           
  
     public enum Player

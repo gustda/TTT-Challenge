@@ -181,7 +181,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 5: Spielauswertung
-Status: Neu
+Status: erledigt (Itereation 3)
 Aufwand: Large
 Beschreibung:
 Das Spiel soll herausfinden, wie es ausgegangen ist. Dafür sind einige Regeln 
@@ -211,7 +211,7 @@ Abnahmekriterien:
   -------------------------------------------------------------------------------------
 
 Req. 5.2: Ein Remies ermitteln
-Status: Neu
+Status: erledigt (Itereation 3)
 Aufwand: medium
 Beschreibung:
 Das Spiel soll erkennen, dass das Spiel unentschieden ausgegangen ist.

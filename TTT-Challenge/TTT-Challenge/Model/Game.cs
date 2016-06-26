@@ -11,8 +11,8 @@ namespace TTT_Challenge.Model
         public GameResult Result { get; private set; }
 
         public Dictionary<char, GameStoneState[]> Gameboard;
-        private int Moves=0;
-        private const int maxMoves=9;
+        private int Moves = 0;
+        private const int maxMoves = 9;
 
         List<List<Coordinate>> WinOpportunities;
 
@@ -56,7 +56,7 @@ namespace TTT_Challenge.Model
         {
             if (GameStoneState.Free != Gameboard[column][row])
                 return false;
-            switch(player)
+            switch (player)
             {
                 case Player.PlayerOne:
                     Gameboard[column][row] = GameStoneState.PlayerOne;
@@ -74,6 +74,12 @@ namespace TTT_Challenge.Model
         private void CheckGameResult()
         {
             CheckWinner();
+
+            if (Result == GameResult.Open)
+            {
+                CheckRemies();
+            }
+
             if (Result == GameResult.Open)
             {
                 if (Moves >= maxMoves)
@@ -239,23 +245,61 @@ namespace TTT_Challenge.Model
 
         private void CheckWinner()
         {
-            foreach(List<Coordinate> opportunity in WinOpportunities)
+            foreach (List<Coordinate> opportunity in WinOpportunities)
             {
-                if(Gameboard[opportunity[0].Column][opportunity[0].Row]==Gameboard[opportunity[1].Column][opportunity[1].Row]
-                    &&Gameboard[opportunity[0].Column][opportunity[0].Row]==Gameboard[opportunity[2].Column][opportunity[2].Row])
+                if (Gameboard[opportunity[0].Column][opportunity[0].Row] == Gameboard[opportunity[1].Column][opportunity[1].Row]
+                    && Gameboard[opportunity[0].Column][opportunity[0].Row] == Gameboard[opportunity[2].Column][opportunity[2].Row])
                 {
                     // all stones have the same value -> chek who is the winner
-                    switch(Gameboard[opportunity[0].Column][opportunity[0].Row])
-                        {
-                            case GameStoneState.PlayerOne:
-                                Result= GameResult.PlayerOneWins;
-                                return;
-                            case GameStoneState.PlayerTwo:
-                                Result= GameResult.PalyerTwoWins;
-                                return;
-                        }    
+                    switch (Gameboard[opportunity[0].Column][opportunity[0].Row])
+                    {
+                        case GameStoneState.PlayerOne:
+                            Result = GameResult.PlayerOneWins;
+                            return;
+                        case GameStoneState.PlayerTwo:
+                            Result = GameResult.PalyerTwoWins;
+                            return;
+                    }
                     // stone are all free, no new geme result, check next
                 }
+            }
+        }
+
+        private void CheckRemies()
+        {
+            // the condition to detect a Remies
+            // every condition has at least min one of both game stones
+            // so we do some math
+            int FailedWinOpportunities = 0;
+            foreach (List<Coordinate> opportunity in WinOpportunities)
+            {
+                GameStoneState firstDetectedStone = GameStoneState.Free;
+                foreach (Coordinate coord in opportunity)
+                {
+                    // set first stone
+                    if (firstDetectedStone == GameStoneState.Free)
+                    {
+                        if (GameStoneState.Free != Gameboard[coord.Column][coord.Row])
+                            firstDetectedStone = Gameboard[coord.Column][coord.Row];
+                    }
+                    else
+                    {
+                        // check with the first stone
+                        if (GameStoneState.Free != Gameboard[coord.Column][coord.Row])
+                        {
+                            if (firstDetectedStone != Gameboard[coord.Column][coord.Row])
+                            {
+                                FailedWinOpportunities++;
+                                break;                                
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (WinOpportunities.Count == FailedWinOpportunities)
+            {
+                Result = GameResult.Remies;
             }
         }
     }

@@ -5,7 +5,7 @@ using TTT_Challenge.Model;
 namespace TTT_Challenge_Test
 {
     [TestClass]
-    public class CheckWinningConditions
+    public class TestWinningConditions
     {
         [TestMethod]
         public void TestRow1()

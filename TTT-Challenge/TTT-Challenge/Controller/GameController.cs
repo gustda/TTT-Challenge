@@ -38,6 +38,14 @@ namespace TTT_Challenge.Controller
                 // we have to do some Output
                 ConsoleOutputController.PrintGamePlayOutput(ActGame);
 
+                if(NextCommandState == CommandState.ShowHelp)
+                {
+                    // the player have requestet a Help message -> print it
+                    ConsoleOutputController.PrintHelp();
+                    // set NextCommand, to GetStone
+                    NextCommandState = CommandState.GetStone;
+                }
+
                 // print command to inform the player, what is to do next
                 var nextPrompt = GetNextPlayersPrompt();
                 ConsoleOutputController.PrintCommand(nextPrompt);
@@ -70,6 +78,8 @@ namespace TTT_Challenge.Controller
                     return NextCommandState;
                 case "ende":
                     return CommandState.QuitGame;
+                case "?":
+                    return CommandState.ShowHelp;
 
                 default:
                     return CommandState.UnknownCommand;

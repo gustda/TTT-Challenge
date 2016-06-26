@@ -138,14 +138,14 @@ Abnahmekriterien:
 
 Req. 4: Spielkommandos Auswerten
 Status: Neu
-Aufwand: medium
+Aufwand: erldeigt (Interartion 3)
 Beschreibung:
 Das Spiel soll vom Spieler aus dem Programm heraus durch ein Kommando bedienen können.
 
 -------------------------------------------------------------------------------------
 
 Req. 4.1: Spiel neustarten
-Status: Neu
+Status: erledigt (Iteration 3)
 Aufwand: smal
 Beschreibung:
 Das Spiel soll vom Spieler aus dem Programm heraus durch ein Kommando neugestartet 
@@ -157,7 +157,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 4.2: Spiel beenden
-Status: Neu
+Status: erledigt (Iteration 3)
 Aufwand: smal
 Beschreibung:
 Das Spiel soll vom Spieler aus dem Programm heraus durch ein Kommando beendet werden 

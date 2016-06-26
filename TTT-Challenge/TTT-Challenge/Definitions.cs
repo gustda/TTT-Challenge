@@ -30,6 +30,7 @@ namespace TTT_Challenge
 
     public enum CommandState
     {
+        ShowHelp,
         QuitGame,
         UnknownCommand,
         GetStone,

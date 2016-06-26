@@ -29,5 +29,16 @@ namespace TTT_Challenge.Graphics
                 Console.WriteLine("Fehler: Hier sollte ein Kommando stehen.");                
             }
         }
+
+        public static void PrintHelp()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Es können die folgenden Kommandos verwendet werden:");
+            Console.WriteLine("- '?' zeigt die Hilfe an ;-)");
+            Console.WriteLine("- 'neu' Startet ein neues Spiel.");
+            Console.WriteLine("- 'ende' Beendet das Spiel.");
+            Console.WriteLine("- 'a0' Setzte einen Stein auf das Feld A - 0, es können nach dem selben prinzip andere Koordinaten angegeben werden.");
+            Console.WriteLine();
+        }
     }
 }

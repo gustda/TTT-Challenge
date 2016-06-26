@@ -53,6 +53,7 @@
     <Compile Include="TestGetNextPlayersPrompt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCheckAndProcessCommand.cs" />
+    <Compile Include="CheckWinningConditions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TTT-Challenge\TTT-Challenge.csproj">

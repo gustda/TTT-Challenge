@@ -46,7 +46,8 @@ namespace TTT_Challenge.Controller
                 var userInput = Console.ReadLine();
                 // process user input
                 NextCommandState = CheckAndProcessCommand(userInput);
-            } while (true);
+            } while (NextCommandState!= CommandState.QuitGame);
+            // quit game by leaving loop, so we return to Main() and leave the program
         }
 
         public CommandState CheckAndProcessCommand(string command)
@@ -64,6 +65,8 @@ namespace TTT_Challenge.Controller
             // process non gameplay commands
             switch (command)
             {
+                case "ende":
+                    return CommandState.QuitGame;
 
                 default:
                     return CommandState.UnknownCommand;

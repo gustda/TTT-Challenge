@@ -65,6 +65,9 @@ namespace TTT_Challenge.Controller
             // process non gameplay commands
             switch (command)
             {
+                case "neu":
+                    StartGame();
+                    return NextCommandState;
                 case "ende":
                     return CommandState.QuitGame;
 

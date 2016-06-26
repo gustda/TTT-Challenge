@@ -137,7 +137,11 @@ namespace TTT_Challenge.Controller
                 switch(ActGame.Result)
                 {
                     case GameResult.Remies:
-                        return "Game Over";
+                        return "Unentschieden";
+                    case GameResult.PlayerOneWins:
+                        return "Spieler 1 hat gewonnen";
+                    case GameResult.PalyerTwoWins:
+                        return "Spieler 2 hat gewonnen";
                     default:
                         return "Not yet implemented";
                 }

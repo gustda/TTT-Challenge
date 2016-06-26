@@ -193,7 +193,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 5.1: Einen Gewinner ermitteln
-Status: Neu
+Status: erledigt (Iteration 3)
 Aufwand: medium
 Beschreibung:
 Es gibt verschiedene Möglichkeiten das Spiel zu gewinnen. Es müssen drei gleiche Steine 

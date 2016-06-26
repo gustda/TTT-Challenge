@@ -14,6 +14,8 @@ namespace TTT_Challenge.Model
         private int Moves=0;
         private const int maxMoves=9;
 
+        List<List<Coordinate>> WinOpportunities;
+
         public Game()
         {
             // Set default value for the new game
@@ -21,6 +23,9 @@ namespace TTT_Challenge.Model
 
             // setup a clear gameboard
             InitGameboard();
+
+            // set win opportunities
+            SetWinOpportunities();
         }
 
         private void InitGameboard()
@@ -68,9 +73,13 @@ namespace TTT_Challenge.Model
 
         private void CheckGameResult()
         {
-            if(Moves>=maxMoves)
+            CheckWinner();
+            if (Result == GameResult.Open)
             {
-                Result = GameResult.Remies;
+                if (Moves >= maxMoves)
+                {
+                    Result = GameResult.Remies;
+                }
             }
         }
 
@@ -81,6 +90,173 @@ namespace TTT_Challenge.Model
             if (Gameboard[column].Length <= row)
                 return false;
             return true;
+        }
+
+        private void SetWinOpportunities()
+        {
+            WinOpportunities = new List<List<Coordinate>>();
+
+            var c1 = new Coordinate();
+            var c2 = new Coordinate();
+            var c3 = new Coordinate();
+
+            #region row 1
+            var row1 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'a';
+            c1.Row = 0;
+            row1.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'b';
+            c2.Row = 0;
+            row1.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'c';
+            c3.Row = 0;
+            row1.Add(c3);
+            WinOpportunities.Add(row1);
+            #endregion row 1
+
+            #region row 2
+            var row2 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'a';
+            c1.Row = 1;
+            row2.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'b';
+            c2.Row = 1;
+            row2.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'c';
+            c3.Row = 1;
+            row2.Add(c3);
+            WinOpportunities.Add(row2);
+            #endregion row 2
+
+            #region row 3
+            var row3 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'a';
+            c1.Row = 2;
+            row3.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'b';
+            c2.Row = 2;
+            row3.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'c';
+            c3.Row = 2;
+            row3.Add(c3);
+            WinOpportunities.Add(row3);
+            #endregion row 3
+
+            #region column 1
+            var column1 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'a';
+            c1.Row = 0;
+            column1.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'a';
+            c2.Row = 1;
+            column1.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'a';
+            c3.Row = 2;
+            column1.Add(c3);
+            WinOpportunities.Add(column1);
+            #endregion column 1
+
+            #region column 2
+            var column2 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'b';
+            c1.Row = 0;
+            column2.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'b';
+            c2.Row = 1;
+            column2.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'b';
+            c3.Row = 2;
+            column2.Add(c3);
+            WinOpportunities.Add(column2);
+            #endregion column 2
+
+            #region column 3
+            var column3 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'c';
+            c1.Row = 0;
+            column3.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'c';
+            c2.Row = 1;
+            column3.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'c';
+            c3.Row = 2;
+            column3.Add(c3);
+            WinOpportunities.Add(column3);
+            #endregion column 3
+
+            #region dig 1
+            var dig1 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'a';
+            c1.Row = 0;
+            dig1.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'b';
+            c2.Row = 1;
+            dig1.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'c';
+            c3.Row = 2;
+            dig1.Add(c3);
+            WinOpportunities.Add(dig1);
+            #endregion dig 1
+
+            #region dig 2
+            var dig2 = new List<Coordinate>();
+            c1 = new Coordinate();
+            c1.Column = 'a';
+            c1.Row = 2;
+            dig2.Add(c1);
+            c2 = new Coordinate();
+            c2.Column = 'b';
+            c2.Row = 1;
+            dig2.Add(c2);
+            c3 = new Coordinate();
+            c3.Column = 'c';
+            c3.Row = 0;
+            dig2.Add(c3);
+            WinOpportunities.Add(dig2);
+            #endregion dig 2
+        }
+
+        private void CheckWinner()
+        {
+            foreach(List<Coordinate> opportunity in WinOpportunities)
+            {
+                if(Gameboard[opportunity[0].Column][opportunity[0].Row]==Gameboard[opportunity[1].Column][opportunity[1].Row]
+                    &&Gameboard[opportunity[0].Column][opportunity[0].Row]==Gameboard[opportunity[2].Column][opportunity[2].Row])
+                {
+                    // all stones have the same value -> chek who is the winner
+                    switch(Gameboard[opportunity[0].Column][opportunity[0].Row])
+                        {
+                            case GameStoneState.PlayerOne:
+                                Result= GameResult.PlayerOneWins;
+                                return;
+                            case GameStoneState.PlayerTwo:
+                                Result= GameResult.PalyerTwoWins;
+                                return;
+                        }    
+                    // stone are all free, no new geme result, check next
+                }
+            }
         }
     }
 }

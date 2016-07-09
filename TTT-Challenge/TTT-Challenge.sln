@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTT-Challenge", "TTT-Challe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTT-Challenge-Test", "TTT-Challenge-Test\TTT-Challenge-Test.csproj", "{D5625045-C7B2-4FFC-BBA8-90F705E2BADC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLib", "GameLib\GameLib.csproj", "{F013191B-8E59-4247-9815-F8FBAA2DB454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLibTest", "GameLibTest\GameLibTest.csproj", "{493B85F2-E35A-4AA7-835E-59BA9D5C0415}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D5625045-C7B2-4FFC-BBA8-90F705E2BADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5625045-C7B2-4FFC-BBA8-90F705E2BADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5625045-C7B2-4FFC-BBA8-90F705E2BADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F013191B-8E59-4247-9815-F8FBAA2DB454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F013191B-8E59-4247-9815-F8FBAA2DB454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F013191B-8E59-4247-9815-F8FBAA2DB454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F013191B-8E59-4247-9815-F8FBAA2DB454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493B85F2-E35A-4AA7-835E-59BA9D5C0415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493B85F2-E35A-4AA7-835E-59BA9D5C0415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493B85F2-E35A-4AA7-835E-59BA9D5C0415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493B85F2-E35A-4AA7-835E-59BA9D5C0415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

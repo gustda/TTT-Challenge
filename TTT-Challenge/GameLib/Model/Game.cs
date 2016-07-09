@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TTT_Challenge.Model
+namespace GameLib.Model
 {
     public class Game
     {

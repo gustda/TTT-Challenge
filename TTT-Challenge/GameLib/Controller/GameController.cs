@@ -1,20 +1,19 @@
-﻿using System;
+﻿using GameLib.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TTT_Challenge.Graphics;
-using TTT_Challenge.Model;
 
-namespace TTT_Challenge.Controller
+namespace GameLib.Controller
 {
     public class GameController
     {
-        private Game ActGame;
+        public Game ActGame { get; set; }
 
         public GameController()
         {
-
+            StartGame();
         }
 
         public void StartGame()
@@ -27,36 +26,6 @@ namespace TTT_Challenge.Controller
 
         public CommandState NextCommandState { get; set; }
         public Player ActPlayer { get; set; }
-
-        public void Run()
-        {
-            // we have to start a new Game
-            StartGame();
-            do
-            {
-                Console.Clear();
-                // we have to do some Output
-                ConsoleOutputController.PrintGamePlayOutput(ActGame);
-
-                if(NextCommandState == CommandState.ShowHelp)
-                {
-                    // the player have requestet a Help message -> print it
-                    ConsoleOutputController.PrintHelp();
-                    // set NextCommand, to GetStone
-                    NextCommandState = CommandState.GetStone;
-                }
-
-                // print command to inform the player, what is to do next
-                var nextPrompt = GetNextPlayersPrompt();
-                ConsoleOutputController.PrintCommand(nextPrompt);
-
-                // Wait for user interaction
-                var userInput = Console.ReadLine();
-                // process user input
-                NextCommandState = CheckAndProcessCommand(userInput);
-            } while (NextCommandState!= CommandState.QuitGame);
-            // quit game by leaving loop, so we return to Main() and leave the program
-        }
 
         public CommandState CheckAndProcessCommand(string command)
         {

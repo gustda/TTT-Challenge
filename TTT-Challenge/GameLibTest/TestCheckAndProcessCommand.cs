@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TTT_Challenge.Controller;
+using GameLib.Controller;
+using GameLib;
 
 namespace TTT_Challenge
 {

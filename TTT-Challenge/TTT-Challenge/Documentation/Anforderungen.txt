@@ -225,7 +225,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 6.0: Anwendung mit GUI anlegen
-Status: Neu
+Status: erledigt (Aufgabe 6)
 Aufwand: small
 Beschreibung:
 Es soll eine Anwendung mit GUI gestartet werden.

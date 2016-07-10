@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLib", "GameLib\GameLib.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLibTest", "GameLibTest\GameLibTest.csproj", "{493B85F2-E35A-4AA7-835E-59BA9D5C0415}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTT-WinForms", "TTT-WinForms\TTT-WinForms.csproj", "{C3C98070-038B-4617-9C4D-A3AD8309D559}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{493B85F2-E35A-4AA7-835E-59BA9D5C0415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{493B85F2-E35A-4AA7-835E-59BA9D5C0415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{493B85F2-E35A-4AA7-835E-59BA9D5C0415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C98070-038B-4617-9C4D-A3AD8309D559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C98070-038B-4617-9C4D-A3AD8309D559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C98070-038B-4617-9C4D-A3AD8309D559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C98070-038B-4617-9C4D-A3AD8309D559}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

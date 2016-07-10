@@ -221,3 +221,43 @@ Abnahmekriterien:
   und kein Spieler drei Steine in einer Reihe, einer Spalte oder einer Diagonalen besitzt
 - Das Spiel erkennt, dass das Spiel unentschieden endet, wenn es keinem Spieler mehr 
   möglich ist, eine Reihe, eine Spalte oder eine Diagonale aufzufüllen.
+
+-------------------------------------------------------------------------------------
+
+Req. 6.0: Anwendung mit GUI anlegen
+Status: Neu
+Aufwand: small
+Beschreibung:
+Es soll eine Anwendung mit GUI gestartet werden.
+
+Abnahmekriterien:
+- Beim Start des Programms läd eine GUI
+
+-------------------------------------------------------------------------------------
+
+Req. 7.0: Spielfeld anzeigen
+Status: Neu
+Aufwand: medium
+Beschreibung:
+Auf der GUI soll ein Spielfeld angezeigt werden, hier werden gesetzte Steine angezeigt 
+und es kann ein Button gedrückt werden, wenn ein Feld verwendet werden soll.
+
+Abnahmekriterien:
+- Es wird ein Spielfeld gezeigt
+- In dem Spielfeld kann angezeigt werden, welcher Spielstein dort liegt
+- Ein Spielfeld kann geklickt werden um den Spielstein des Aktuellen Spielers zu plazieren
+
+-------------------------------------------------------------------------------------
+
+Req. 8.0: Spielen
+Status: Neu
+Aufwand: Large
+Beschreibung:
+Das Spiel soll Spielbar werden
+
+Abnahmekriterien:
+- Entsprechend der Bekannten Regeln kann ein Spiel gespielt werden
+- Setzten von Spielsteinen ist möglich
+- Starten/Neustarten eines Spiel ist möglich
+- Spielergebnisse werden angezeigt
+- Der aktuelle Spieler wird angezeigt.

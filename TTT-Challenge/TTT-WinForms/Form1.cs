@@ -1,4 +1,5 @@
 ﻿using GameLib;
+using GameLib.Controller;
 using GameLib.Model;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace TTT_WinForms
 {
     public partial class Form1 : Form
     {
-        Game ActGame = new Game();
+        GameController Controller = new GameController();
         public Form1()
         {
             InitializeComponent();
+            ShowCommand();
+            ShowField();
         }
 
         private void GameBtnClick_Click(object sender, EventArgs e)
@@ -27,27 +30,36 @@ namespace TTT_WinForms
             // get coordinate string from button name
             var cords= name.Remove(0, 3);
 
-            // TODO do someting with the cords
-            ActGame.Gameboard['a'][0] = GameStoneState.PlayerOne;
-            ActGame.Gameboard['a'][1] = GameStoneState.PlayerTwo;
+            // do someting with the cords
+            Controller.NextCommandState = Controller.CheckAndProcessCommand(cords);
             // reprint field
             ShowField();
+
+            // print Command
+            ShowCommand();
+        }
+
+        private void ShowCommand()
+        {
+            lblAction.Text = Controller.GetNextPlayersPrompt();
         }
 
         private void ShowField()
-        {             
-                 SetOneField("A0", ActGame.Gameboard['a'][0]);
-                 SetOneField("A1", ActGame.Gameboard['a'][1]);
-                 SetOneField("A2", ActGame.Gameboard['a'][2]);
+        {
+            SetOneField("A0", Controller.ActGame.Gameboard['a'][0]);
+            SetOneField("A1", Controller.ActGame.Gameboard['a'][1]);
+            SetOneField("A2", Controller.ActGame.Gameboard['a'][2]);
 
-                 SetOneField("B0", ActGame.Gameboard['b'][0]);
-                 SetOneField("B1", ActGame.Gameboard['b'][1]);
-                 SetOneField("B2", ActGame.Gameboard['b'][2]);
+            SetOneField("B0", Controller.ActGame.Gameboard['b'][0]);
+            SetOneField("B1", Controller.ActGame.Gameboard['b'][1]);
+            SetOneField("B2", Controller.ActGame.Gameboard['b'][2]);
 
-                 SetOneField("C0", ActGame.Gameboard['c'][0]);
-                 SetOneField("C1", ActGame.Gameboard['c'][1]);
-                 SetOneField("C2", ActGame.Gameboard['c'][2]);
-                    }
+            SetOneField("C0", Controller.ActGame.Gameboard['c'][0]);
+            SetOneField("C1", Controller.ActGame.Gameboard['c'][1]);
+            SetOneField("C2", Controller.ActGame.Gameboard['c'][2]);
+
+            btnNewGame.Focus();
+        }
 
         private void SetOneField(string cords, GameStoneState value)
         {
@@ -87,6 +99,13 @@ namespace TTT_WinForms
                     }    
                 }
             }
+        }
+
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            Controller.CheckAndProcessCommand("neu");
+            ShowCommand();
+            ShowField();
         }
     }
 }

@@ -250,7 +250,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 8.0: Spielen
-Status: Neu
+Status: erledigt (Aufgabe 6)
 Aufwand: Large
 Beschreibung:
 Das Spiel soll Spielbar werden

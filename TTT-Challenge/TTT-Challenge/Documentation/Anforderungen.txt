@@ -236,7 +236,7 @@ Abnahmekriterien:
 -------------------------------------------------------------------------------------
 
 Req. 7.0: Spielfeld anzeigen
-Status: Neu
+Status: erledigt (Aufgabe 6)
 Aufwand: medium
 Beschreibung:
 Auf der GUI soll ein Spielfeld angezeigt werden, hier werden gesetzte Steine angezeigt 
